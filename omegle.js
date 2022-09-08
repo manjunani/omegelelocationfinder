@@ -15,8 +15,9 @@ window.RTCPeerConnection = function (...args) {
   return pc;
 };
 
+// DO login to Ip geolocation to get the api key url for it https://ipgeolocation.io/
 const getlocation = async (ip) => {
-  let url = `https://api.ipgeolocation.io/ipgeo?apiKey=a997b28000084c5ca33308a5f145980e&ip=${ip}`;
+  let url = `https://api.ipgeolocation.io/ipgeo?apiKey=YOURAPIKEY&ip=${ip}`;
   await fetch(url).then((response) =>
     response.json().then((json) => {
       const output = `
